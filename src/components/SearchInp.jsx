@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const SearchInp = ({ onAddTodo }) => {
+const SearchInp = ({ onAddTodo, todos }) => {
     const [input, setInput] = useState('');
     const handleSubmit = () => {
         if (input === '' || input.trim() === '') {
@@ -8,10 +8,18 @@ const SearchInp = ({ onAddTodo }) => {
             setInput('');
             return;
         }
+
+        const existingTodo = todos.find((todo) => todo.text.toLowerCase() === input.toLowerCase());
+        if (existingTodo) {
+            alert('Todo already exists');
+            setInput('');
+            return;
+        }
         onAddTodo(input);
         alert('Todo added successfully')
         setInput('');
     }
+
 
     return (
         <>

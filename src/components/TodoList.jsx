@@ -4,8 +4,8 @@ import TodoItem from './TodoItem'
 const TodoList = ({ todos, onDeleteTodo, onToggleTodo }) => {
     return (
         <>
-            <div className='max-w-[85%] mx-auto p-4 rounded-md bg-white'>
-                <h2 className='text-2xl font-medium text-green-500 text-center'>TodoList:</h2>
+            <div className='max-w-[90%] lg:max-w-[85%] mx-auto rounded-md bg-white'>
+                <h2 className='text-2xl font-medium text-green-500 text-start p-2'>TodoList:</h2>
                 {todos.map((item) => {
                     return (
                         <TodoItem key={item.id} todo={item} onDeleteTodo={onDeleteTodo} onToggleTodo={onToggleTodo} />

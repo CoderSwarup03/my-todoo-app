@@ -20,7 +20,7 @@ const App = () => {
     <>
       <div className='min-h-screen p-4'>
         <h1 className='text-3xl font-bold text-center text-green-500'>TodoApp New🗒️</h1>
-        <SearchInp onAddTodo={addTodo} />
+        <SearchInp onAddTodo={addTodo}  todos={todos}/>
         <TodoList todos={todos} onDeleteTodo={deleteTodo} onToggleTodo={toggleTodo} />
       </div>
     </>
