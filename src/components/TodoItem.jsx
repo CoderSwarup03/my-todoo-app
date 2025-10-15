@@ -9,7 +9,7 @@ const TodoItem = ({ todo, onDeleteTodo, onToggleTodo }) => {
         ) : (
           <>
             <div className='flex justify-between p-3 items-center border-2 border-green-500 rounded-md'>
-              <h2 className={`text-xl font-bold overflow-hidden ${todo.completed ? 'line-through' : ''}` }>{todo.text}</h2>
+              <h2 className={`text-xl font-bold overflow-scroll ${todo.completed ? 'line-through' : ''}` }>{todo.text}</h2>
               <div className='flex flex-col gap-2 justify-center items-center md:flex-row'>
                 <button
                   onClick={() => onToggleTodo(todo.id)}

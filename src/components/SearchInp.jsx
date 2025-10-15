@@ -20,7 +20,6 @@ const SearchInp = ({ onAddTodo, todos }) => {
         setInput('');
     }
 
-
     return (
         <>
             <div className='max-w-[85%] mx-auto flex flex-col gap-3 mt-4'>
